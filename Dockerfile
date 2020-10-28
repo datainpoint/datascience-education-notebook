@@ -15,5 +15,5 @@ RUN conda install rise
 
 # Add nbgitpuller
 RUN pip install nbgitpuller
-# Add xlrd and openpyxl
-RUN pip install xlrd openpyxl
+# Add xlrd, openpyxl, and lxml
+RUN pip install xlrd openpyxl lxml
