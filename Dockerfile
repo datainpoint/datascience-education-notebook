@@ -41,4 +41,4 @@ RUN conda install rise
 # Add nbgitpuller
 RUN pip install nbgitpuller
 # Add xlrd, openpyxl, and lxml
-RUN pip install xlrd openpyxl lxml
+RUN pip install xlrd openpyxl lxml jupyter-resource-usage
