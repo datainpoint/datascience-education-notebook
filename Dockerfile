@@ -32,6 +32,7 @@ RUN apt-get update \
   && dpkg -i rstudio-server-*-amd64.deb \
   && rm rstudio-server-*-amd64.deb
 
+RUN R -e "install_version('testthat', version = '3.0.1', dependencies= T)"
 ENV PATH=$PATH:/usr/lib/rstudio-server/bin
 USER $NB_USER
 # Add RISE to the mix as well so user can show live slideshows from their notebooks
