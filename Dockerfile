@@ -32,7 +32,7 @@ RUN apt-get update \
   && dpkg -i rstudio-server-*-amd64.deb \
   && rm rstudio-server-*-amd64.deb
 
-RUN R -e "install.packages('devtools')"
+RUN R -e "install.packages('devtools', dependencies=TRUE, repos='http://cran.rstudio.com/')"
 RUN R -e "library(devtools)"
 RUN R -e "install_version('testthat', version = '3.0.1', dependencies= T)"
 ENV PATH=$PATH:/usr/lib/rstudio-server/bin
